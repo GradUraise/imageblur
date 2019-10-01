@@ -37,11 +37,50 @@ end
 
 image = Image.new([
   [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
   [0, 1, 0, 0],
-  [0, 0, 0, 1],
+  [0, 0, 0, 0],
   [0, 0, 0, 0]
 ])
+puts "One Pixel Transformation"
 image.output_image
+puts
 puts "blurs to"
+puts
+image.blur(1)
+image.output_image
+puts
+puts "Two Pixel Transformation"
+puts
+image = Image.new([
+    [0, 0, 0, 0],
+    [0, 0, 1, 0],
+    [0, 0, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+])
+image.output_image
+puts
+puts "blurs to"
+puts
+image.blur(1)
+image.output_image
+puts
+puts "Pixel Edge Transformation"
+puts
+image = Image.new([
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [1, 0, 0, 0],
+    [0, 0, 0, 0]
+])
+image.output_image
+puts
+puts "blurs to"
+puts
 image.blur(1)
 image.output_image
